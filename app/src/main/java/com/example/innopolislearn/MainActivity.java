@@ -1,14 +1,21 @@
 package com.example.innopolislearn;
 
-import androidx.appcompat.app.AppCompatActivity;
+import java.math.BigDecimal;
 
-import android.os.Bundle;
+public class MainActivity {
+    public static void main (String[] args){
 
-public class MainActivity extends AppCompatActivity {
+        String hi = "Привет ", world = "Мир!";
+        System.out.println(hi+world);
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        double x = 1.0001, y = 1.0000999;
+        BigDecimal one = new BigDecimal(x), two = new BigDecimal(y);
+        System.out.println(one.compareTo(two));
+
+        StringBuilder newString = new StringBuilder(hi+world);
+        newString.replace(6, 11, "Java");
+
+        System.out.println(newString);
+
     }
 }
